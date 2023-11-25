@@ -5,6 +5,6 @@ WORKDIR /code
 
 COPY pyproject.toml .
 
-RUN pip install poetry && poetry config virtualenv.create false && poetry install --no-dev --no-root
+RUN pip install poetry && poetry config virtualenvs.create false && poetry install --no-dev --no-root
 
 COPY . .
