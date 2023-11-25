@@ -1,6 +1,7 @@
 from rest_framework import generics
 
 from users.serializers import UserSerializer
+from users.tasks import send_registration_mail
 
 
 class RegisterUserAPIView(generics.CreateAPIView):
@@ -9,4 +10,5 @@ class RegisterUserAPIView(generics.CreateAPIView):
 
     def perform_create(self, serializer):
         """Сохранение созданного пользователя"""
-        serializer.save()
+        user = serializer.save()
+        send_registration_mail.delay(user.email)
