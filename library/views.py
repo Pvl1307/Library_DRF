@@ -1,6 +1,7 @@
 from rest_framework import generics
 
 from library.models import Book
+from library.paginators import BookPaginator
 from library.serializers import BookSerializer
 
 
@@ -17,6 +18,7 @@ class BookListAPIView(generics.ListAPIView):
     """Список книг"""
     serializer_class = BookSerializer
     queryset = Book.objects.all()
+    pagination_class = BookPaginator
 
 
 class BookRetrieveAPIView(generics.RetrieveAPIView):
