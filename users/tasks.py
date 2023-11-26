@@ -23,5 +23,5 @@ def send_registration_mail(email):
 
         logger.info(f'Mail sent to {email}')
     except smtplib.SMTPException as e:
-        # Обработка исключения SMTPError
+        # Обработка исключения SMTPException
         logger.error(f'Failed to send email: {str(e)}')
