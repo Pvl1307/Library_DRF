@@ -8,9 +8,6 @@ class Book(models.Model):
     publication_year = models.IntegerField(verbose_name='Год публикации')
     isbn = models.CharField(max_length=17, unique=True, verbose_name='ISBN')
 
-    def __str__(self):
-        return f'{self.title} ({self.author}) - {self.publication_year}.'
-
     class Meta:
         verbose_name = 'Книга'
         verbose_name_plural = 'Книги'
