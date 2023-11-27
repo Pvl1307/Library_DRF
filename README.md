@@ -26,6 +26,14 @@ POSTGRES_PORT = 5432
 CELERY_BROKER_URL = 'smth://123.1.1.0:1234/0'
 CELERY_RESULT_BACKEND = 'smth://123.1.1.0:1234/0'
 CELERY_TIMEZONE = 'UTC'
+
+EMAIL_HOST=email.host.com
+EMAIL_PORT=465
+EMAIL_HOST_USER=ur_mail@gmail.com/ru
+EMAIL_HOST_PASSWORD=your_password
+EMAIL_USE_TLS=True/False
+EMAIL_USE_SSL=True/False
+
 ```
 
 ***
@@ -36,7 +44,7 @@ CELERY_TIMEZONE = 'UTC'
 
 ## Для завершения работы
 
-В терминале, где запущен docker, прожать **Ctrl + C**
+В терминале, где запущен docker, выполните команду ```docker-compose down```
 
 
 

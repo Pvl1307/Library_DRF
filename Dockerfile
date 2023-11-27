@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.11.6-slim
 LABEL authors='Pvl1307'
 
 WORKDIR /code
